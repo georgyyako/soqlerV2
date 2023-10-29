@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+        <div class="slds-form-element">
+            <c-text-finder 
+                pick-finder-label={finderObjLabel} 
+                pick-finder-array={finderObjArray} 
+                ongetsearchvalue={handleObjValue}
+            ></c-text-finder>
+            <div if:true={sObjValue}>
+                <c-expression-builder
+                    expression-fields-array={finderFieldArray}
+                ></c-expression-builder>
+            </div>
+        </div>
+    </div>
+</template>

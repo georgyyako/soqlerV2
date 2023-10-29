@@ -1,0 +1,45 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+    <template for:each={expressionArray} for:item="expression">
+        <div key={expression.value}  class="slds-grid slds-wrap slds-no-flex">
+            <div class="slds-col slds-size_4-of-12">
+                <c-text-finder 
+                    pick-finder-label='F' 
+                    pick-finder-array={expressionFieldsArray} 
+                    ongetsearchvalue={handleObjValue2}
+                ></c-text-finder>
+                    <!--
+                    <lightning-input 
+                        label='Field' 
+                        value={expression.value} 
+                        onchange={changeField} 
+                        type="input"
+                    ></lightning-input>
+                    -->
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input 
+                    label='expression' 
+                    type="input"
+                ></lightning-input>
+             </div>
+             <div class="slds-col slds-size_4-of-12">
+                <lightning-input 
+                    label='value' 
+                    type="input"
+                ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+                <lightning-button-icon
+                    icon-name="utility:delete"
+                    data-id={expression.value}
+                    onclick={deleteCondition}
+                    class="slds-p-left_small"
+                ></lightning-button-icon>
+        </div>
+        </div>
+    </template>
+    <lightning-button label='add' onclick={addCondition}></lightning-button>
+    </div>
+    
+</template>
