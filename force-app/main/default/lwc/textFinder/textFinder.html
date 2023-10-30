@@ -11,11 +11,11 @@
                         <template for:each={searchResults} for:item="searchResult">
                             <li key={searchResult.value} data-value={searchResult.value} data-label={searchResult.label} role="presentation"
                                 onclick={selectSearchResult} class="slds-listbox__item">
-                                <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small "
+                                <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                     role="option">
                                     <span class="slds-media__body">
                                         <span class="slds-truncate" title={searchResult.label}>
-                                            {searchResult.label}
+                                            {searchResult.label} 1
                                         </span>
                                     </span>
                                 </div>

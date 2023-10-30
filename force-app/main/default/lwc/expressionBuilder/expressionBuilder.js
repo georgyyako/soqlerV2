@@ -5,7 +5,7 @@ export default class ExpressionBuilder extends LightningElement {
     @track expressionArray = [];
 
     connectedCallback() {
-        this.expressionArray.push({ value: '', label: ''});
+        this.expressionArray.push({ value: 'one', label: 'one'});
     }
 
     handleObjValue() {
@@ -27,7 +27,7 @@ export default class ExpressionBuilder extends LightningElement {
         
         // Найдем индекс элемента, который нужно удалить
         const index = this.expressionArray.findIndex(item => item.value === selectedItem);
-    
+        console.log(index);
         // Если элемент найден, удалим его из массива
         if (index !== -1) {
             this.expressionArray.splice(index, 1);
